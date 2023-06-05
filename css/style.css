@@ -148,6 +148,57 @@ body {
   background-color: #eee;
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  background-image: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
+  z-index: 100;
+  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.nav--active {
+  transform: translateX(0);
+}
+.nav__item {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  color: #fff;
+  text-decoration: none;
+}
+.nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #fff;
+  transform: scaleY(0);
+  transition: transform 0.3s;
+}
+.nav__item:hover::before {
+  transform: scaleY(1);
+}
+
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  animation: navItemsAnimation 1s;
+}
+
 @media (min-width: 768px) {
   .white-block {
     height: 50px;
@@ -169,6 +220,6 @@ body {
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hero-mini.jpg");
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/hero-bg.jpg");
   }
 }/*# sourceMappingURL=style.css.map */
