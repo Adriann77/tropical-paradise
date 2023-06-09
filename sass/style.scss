@@ -157,41 +157,40 @@ body {
   }
 }
 
-
 @keyframes navItemsAnimation {
-  from{
+  from {
     transform: translateX(200%);
   }
-  to{
+  to {
     transform: translateX(0);
   }
 }
 
-.nav-items-animation{
+.nav-items-animation {
   animation: navItemsAnimation 1s;
 }
 
 //  MAIN
 //  DREAMS SECTION
 
-.dreams{
-  &__box{
+.dreams {
+  &__box {
     display: flex;
     flex-direction: column;
     margin: 2em 0;
   }
 
-  &__img{
+  &__img {
     width: 100%;
     margin-bottom: 1em;
     border-radius: 8px;
   }
 
-  &__title{
+  &__title {
     position: relative;
     margin-bottom: 0.5em;
 
-    &--first::after{
+    &--first::after {
       content: '';
       position: absolute;
       width: 20%;
@@ -203,7 +202,7 @@ body {
       z-index: -1;
     }
 
-    &--second::after{
+    &--second::after {
       content: '';
       position: absolute;
       background-color: #3369e9;
@@ -216,57 +215,65 @@ body {
     }
   }
 
-  &__text{
+  &__text {
     font-size: 1.4rem;
   }
 }
 
+// hero-img
 
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  text-align: center;
+  color: $pure-white;
+  @include heroImages('/img/poly-mini.jpg');
+  overflow: hidden;
 
-
-
-
-
-
-
-
-
-
-
+  &__title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.8rem;
+    margin-bottom: 0.5em;
+  }
+  &__text {
+    padding: 1em 0;
+  }
+}
 
 // =======================================
 // MEDIA
 // =======================================
 
-@media(min-width: 576px){
-  .dreams{
-    &__box{
+
+
+
+@media (min-width: 576px) {
+  .dreams {
+    &__box {
       flex-direction: row;
       justify-content: space-between;
 
-      &-text{
+      &-text {
         width: 55%;
-        &--right{
+        &--right {
           text-align: right;
         }
       }
 
-      &-img{
+      &-img {
         width: 40%;
-        &--right{
+        &--right {
           order: 1;
         }
       }
     }
 
-    &__img{
+    &__img {
       margin-bottom: 0;
       min-height: 300px;
     }
   }
 }
-
-
 
 @media (min-width: 768px) {
   .white-block {
@@ -286,10 +293,23 @@ body {
     }
   }
 
-  .dreams{
-    &__text{
+  .dreams {
+    &__text {
       font-size: 1.8rem;
     }
+  }
+}
+
+.hero-img {
+  padding: 30rem 2em;
+
+  hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  &__text {
+    font-size: 2.2rem;
   }
 }
 
@@ -303,17 +323,17 @@ body {
     background-image: $blue-gradient, url('../img/hero-bg.jpg');
   }
 
-  .nav{
-    &__item{
+  .nav {
+    &__item {
       font-size: 4.8rem;
     }
   }
 
-  .dreams{
-    &__box{
+  .dreams {
+    &__box {
       margin: 5em 0;
 
-      &-text{
+      &-text {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -321,14 +341,26 @@ body {
       }
     }
 
-    &__title{
-      font-size:  3.6rem;
+    &__title {
+      font-size: 3.6rem;
     }
 
-    &__text{
+    &__text {
       font-size: 2.2rem;
     }
+  }
 
-   
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: $blue-gradient, url(/img/polynesia-3021072_1920.jpg);
+  }
+
+  &__title {
+    font-size: 7.2rem;
+  }
+
+  hr {
+    width: 60%;
+    max-width: 900px;
   }
 }

@@ -270,6 +270,26 @@ body {
   font-size: 1.4rem;
 }
 
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("/img/poly-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.hero-img__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 4.8rem;
+  margin-bottom: 0.5em;
+}
+.hero-img__text {
+  padding: 1em 0;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     flex-direction: row;
@@ -310,6 +330,17 @@ body {
     font-size: 1.8rem;
   }
 }
+.hero-img {
+  padding: 30rem 2em;
+}
+.hero-img hr {
+  margin: 0 auto;
+  width: 70%;
+}
+.hero-img__text {
+  font-size: 2.2rem;
+}
+
 @media (min-width: 992px) {
   .burger-btn {
     top: 50px;
@@ -335,5 +366,9 @@ body {
   }
   .dreams__text {
     font-size: 2.2rem;
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(/img/polynesia-3021072_1920.jpg);
   }
 }/*# sourceMappingURL=style.css.map */
