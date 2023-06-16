@@ -190,29 +190,7 @@ body {
     position: relative;
     margin-bottom: 0.5em;
 
-    &--first::after {
-      content: '';
-      position: absolute;
-      width: 20%;
-      height: 90%;
-      background-color: #3369e9;
-      left: 56px;
-      top: 5px;
-      border-radius: 4px;
-      z-index: -1;
-    }
-
-    &--second::after {
-      content: '';
-      position: absolute;
-      background-color: #3369e9;
-      z-index: -1;
-      border-radius: 4px;
-      height: 90%;
-      width: 7%;
-      right: 170px;
-      top: 5px;
-    }
+   
   }
 
   &__text {
@@ -417,13 +395,59 @@ body {
 
 
 }
-
-
-
-
 }
 
 
+// REVIEVS
+
+@media (max-width: 767px) {
+  .reviews.section-padding{
+    padding: 6em 0;
+  }
+}
+
+.reviews{
+  &__box{
+    position: relative;
+    margin: 2em;
+    padding: 2em;
+    background-repeat: 8px;
+    box-shadow: 3px 3px 10px #2e2e2e2e;
+    transition: transform .3s;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
+  &__box-img{
+    position: absolute;
+    top: 8%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+    img{
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__box-quote{
+    margin-bottom: 1em;
+    font-size: 3rem;
+    color: $main-color;
+  }
+
+  &__box-text{
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+    color: $dark;
+  }
+
+ 
+}
 
 
 
